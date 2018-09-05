@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>App frontend</title>
+  </head>
+  <body>
+    <h1>It is App frontend test</h1>
+    <p> We are using Node.js <script>document.write(process.versions.node)</script>,
+    Chromium <script>document.write(process.versions.chrome)</script>,
+    and Electron <script>document.write(process.versions.electron)</script>.</p>
+    <p>Input something to get echo reply to make sure backend sever is running</p>
+    <input id="input" value="Chen goes fishing"></input>
+    <div id="reply"></div>
+  </body>
+
+  <!-- Init server -->
+  <script type="text/javascript" src='frontend/js/server/server_api.js'>
+  </script>
+  <script type="text/javascript" src='frontend/js/server/init_server.js'>
+  </script>
+  <!-- Init client -->
+  <script type="text/javascript" src='frontend/js/client/init_client.js'>
+  </script>
+  <!-- Client logics -->
+  <script type="text/javascript" src='frontend/js/client/logics/echo_on_ready.js'>
+  </script>
+  <script type="text/javascript" src='frontend/js/client/logics/echo_input.js'>
+  </script>
+  <!-- Server logics -->
+  <script type="text/javascript" src='frontend/js/server/logics/handle_server_update_event.js'>
+  </script>
+</html>
