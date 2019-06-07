@@ -4,6 +4,8 @@ This repo contains a template for making your own python-backend + js-frontend a
 The code uses `zerorpc` inter-process communcation python package that allows this setup to run python-powered backend (that can be used e.g. machine learning or image processing) and flexible electron-powered UI.  
 This code is an adaptation of [this](https://www.fyears.org/2017/02/electron-as-gui-of-python-apps-updated.html) post, but unlike the initial app, my python server has it's own inner state and loop, therefore it can call the fontend by itself, successfully processing long queues (such as heavy image processing). The class architechteure was also changed.  
 
+![](docs/images/main.jpg)
+
 # Architecture
 Simplified version of the architecture is provided below. It comprises of the python App class that incorporates both server that processes the AppAPI calls and the client that sends the App.run() loop commands to the frontend.  
 ```text
